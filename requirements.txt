@@ -10,3 +10,4 @@ google-generativeai
 pdfplumber
 sendgrid
 pymupdf
+tensorflow

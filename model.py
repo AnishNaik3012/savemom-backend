@@ -1926,3 +1926,15 @@ class BreastFeedingRecord(Base):
     feedingTime : Mapped[datetime] = mapped_column(DateTime, nullable=False)
     side : Mapped[Optional[str]] = mapped_column(String, nullable=False)
     createdAt: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())    
+
+class RAGKnowledge(Base):
+    __tablename__ = "rag_knowledge"
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    report_title: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    category: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    summary: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    description: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    health_status: Mapped[Optional[str]] = mapped_column(String, nullable=True)
+    wellness_score: Mapped[Optional[int]] = mapped_column(Integer, nullable=True)
+    raw_data: Mapped[Optional[dict]] = mapped_column(JSON, nullable=True)
+    createdAt: Mapped[datetime] = mapped_column(TIMESTAMP, server_default=func.now())
