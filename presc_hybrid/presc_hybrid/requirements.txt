@@ -1,0 +1,15 @@
+tenacity
+google-genai
+google-generativeai
+langchain-google-genai
+langchain-community
+langchain
+chromadb
+sentence-transformers
+fastapi
+uvicorn
+python-multipart
+pypdf
+pillow
+python-dotenv
+rank_bm25
